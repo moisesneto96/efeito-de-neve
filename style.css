@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700;900&display=swap');
+
+*{
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+ border: none;
+ outline:none;
+ text-decoration: none;
+ text-transform: capitalize;
+}
+body{
+    overflow: hidden;
+    font-family:'nunito', sans-serif;
+}
+.container{
+    background: url(./img/neve.png);
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+    opacity: .9;
+}
+.container .content{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 25%;
+    left: 25%;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    background-color: rgba(226, 251, 255, .363);
+    opacity: .9;
+    width: 700px;
+    z-index: 1;
+
+}
+.container .content .title{
+    font-size: 45px;
+    color: #0a3040;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 900;
+}
+.container .content .count-down{
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+    gap: 15px;
+}
+.container .content .count-down .box{
+    padding: 10px 10px;
+    background-color: #0a3040;
+    border-radius: 5px;
+    text-align: center;
+}
+.container .content .count-down .box h3{
+font-size: 55px;
+padding: 10px;
+width: 100px;
+font-weight: bold;
+color: #fff;
+}
+
+.container .content .count-down .box p{
+font-size: 20px;
+padding: 5px 0;
+color: #fff;
+}
+.container span{
+    position:absolute ;
+    top: -50px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    filter: blur(3px);
+    animation: snowFall 5s linear infinite;
+    background: #fff;
+}
+@keyframes snowFall{
+    100%{
+        transform: translateY(105vh) scale(0.4);
+    }
+}
+
